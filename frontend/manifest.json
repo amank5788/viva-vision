@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "name": "Viva-Vision",
+    "description": "Revamp your virtual viva with an AI-powered response generator that leverages ChatGPT and temporary discussion records.",
+    "version": "1.0.0",
+    "permissions": ["activeTab"],
+    "host_permissions": ["https://tech-int-cheat-backend.herokuapp.com/infer_response"],
+    "action": {
+      "default_popup": "popup/popup.html",
+      "default_icon": "images/viva-visio-128.png"
+    },
+    "icons": {
+      "32": "images/viva-visio-32.png",
+      "48": "images/viva-visio-48.png",
+      "128": "images/viva-visio-128.png"
+    },
+    "content_scripts": [
+      {
+        "js": ["scripts/close_caption_extraction.js"],
+        "matches": [
+          "https://meet.google.com/*"
+        ]
+      }
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "options_page": "options.html"
+  }

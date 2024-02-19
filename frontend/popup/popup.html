@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body >
+    <div id="popup"
+    class="w-full h-screen flex flex-wrap  bg-cover bg-no-repeat bg-gray-800"
+   
+    
+>
+
+    <div class="w-full">
+        <div class="w-[500px]  border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30">
+            
+                <div class="w-full mb-1">
+                    <div class="bg-white p-3 rounded-lg text-sm flex flex-col overflow-auto"   >
+                        <div id="chatContainer"  class="flex flex-col overflow-auto ">
+                            
+                           </div>
+                       
+                       <div class="bg-slate-700 text-white text-center m-auto p-1 rounded-lg mt-3">
+                        selected for response:- <strong id="startContentEx"></strong> ...
+                        <strong id="endContentEx"></strong>
+                    </div>
+                    </div>
+                </div>
+                <div class="relative w-full h-0.5">
+                    <button 
+                    id="gernerateResponse" 
+                         disabled
+                        type="button"
+                        class="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 border-2 border-white rounded-md bg-red-600 text-white px-2 py-1"
+                        
+                    >
+                    <div class="flex">
+                        get response
+                        <img style="width: 20px; padding: 2px;" src="../images/magic-wand.png" alt="img">
+                    </div>
+                    </button>
+                </div>
+                <div class="w-full mt-1 mb-4">
+                    <div  class="bg-white p-3 rounded-lg text-sm flex flex-col overflow-auto">
+                        <div class="bg-slate-700 text-white text-center m-auto p-1 rounded-lg mb-3">
+                             response for:-<strong id="responseStartContentEx"></strong> ...
+                             <strong id="responseEndContentEx"></strong>
+                        </div>
+                       <div id="responseContainer" class="flex flex-col overflow-auto ">
+                        
+                       </div>
+                     
+                    </div>
+                </div>
+               
+            
+        </div>
+    </div>
+</div>
+<script src="./popup.js"></script>
+</body>
+</html>
